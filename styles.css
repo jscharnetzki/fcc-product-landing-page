@@ -1,0 +1,242 @@
+*, ::after, ::before {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    overflow-x:hidden;
+}
+
+html {
+    font-family: Apercu, sans-serif;
+    background-color: #deeff5;
+    color: #4a5060;
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+    max-width: 100%;
+}
+
+main {
+    padding-top: 60px;
+}
+
+.section {
+    position: relative;
+}
+
+.anchor {
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    top: -60px;
+    left: 0;
+    visibility: hidden;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    justify-content:space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+#logo {
+    color: #4a5060;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 5px 0px 5px 5px;
+}
+
+#logo > img {
+    width: 40px;
+    height: 40px;
+}
+
+nav {
+    width: 50%;
+    padding: 0px 10px 0px 20px;
+}
+
+nav > ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-inline-start: 0;
+    margin-block: 0;
+    height: 100%;
+    list-style-type: none;
+  }
+
+.header-title {
+    letter-spacing: -0.05rem;
+}
+
+h1, h2 {
+    text-align: center;
+    padding: 10px 10px;
+    font-size: 1.5rem;
+}
+
+h3 {
+    text-align: left;
+}
+
+.header-subtitle {
+    font-size: 1.8rem;
+}
+
+.banner {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.Introduction {
+    width: 90%;
+    text-align: center;
+    margin: auto;
+}
+
+.Introduction > .Introduction-text {
+    display: flex;
+    font-size: 1.1rem;
+    font-weight: lighter;
+    padding-bottom:10px;
+}
+
+.subscription, .video {
+    font-size: 1.1rem;
+    width: 100%;
+    text-align: center;
+    background-color: #b5dce9;
+    padding: 10px 10px;
+}
+
+#form input {
+    width: 25%; 
+    height: 5vh;
+    padding: 2.5px 5px 2.5px 5px;
+    margin: 10px;
+    background-color: whitesmoke;
+    border-radius: 2.5px;
+}
+
+.subscription > #form > button {
+    display: table-cell;
+    margin: 0 auto;
+    width: 25%;
+    height: auto;
+    padding: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #deeff5;
+    background: #0091ea;
+    border: 2px solid #0091ea;
+    border-radius: 5px;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+.text > .section {
+    display: grid;
+    grid-auto-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 3px;
+}
+
+.text > .section > .description {
+    margin: auto;
+    justify-items: center;
+    align-items:left;
+}
+
+.text > .section > .Headspace_picture_1, .text > .section > .Headspace_picture_2,
+ .text > .section > .Headspace_picture_3, .text > .section > .Headspace_picture_4 {
+    display: flex;
+    margin: auto;
+    width: 35vh;
+    height: auto;
+    align-items: center;
+    justify-items: center;
+    padding: 10px 5px;
+}
+
+.text > .section > .description > .text-header {
+    font-size: 1.4rem;
+    font-weight:bolder;
+}
+
+.text > .section > .description > .description-text {
+    font-size: 1.1rem;
+    font-weight:lighter;
+    margin: 2.5px 0px 0px 0px;
+}
+
+a {
+    text-decoration: none;
+    color: #4a5060;
+}
+
+.video iframe {
+    display: flex;
+    margin: auto;
+    width: 60%;
+    height: 60vh;
+    align-items: center;
+    justify-items: center;
+    padding-bottom: 20px;
+    border-radius: 10px;
+}
+
+.social-icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.2rem;
+    align-items:inherit;
+    padding: 10px 20px;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .logo {
+        display:block;
+        width: 100%;
+        align-items: center;
+    }
+
+    nav > ul {
+        visibility: hidden;
+    }
+
+    #form input {
+        height: 5vh;
+    }
+
+    .text > .section {
+        display: block;
+    }
+
+    .text > .section > .description > .text-header, .text > .section > .description > .description-text {
+        text-align: center;
+        padding: 5px 10px;
+    }
+
+    .subscription > #form > button {
+        display: block;
+    }
+
+    .text > .section > .Headspace_picture_1, .text > .section > .Headspace_picture_2,
+ .text > .section > .Headspace_picture_3, .text > .section > .Headspace_picture_4 {
+    width: 50%;
+    height: auto;
+ }
+}
